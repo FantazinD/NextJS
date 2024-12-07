@@ -11,9 +11,6 @@ export default function About() {
             <button onClick={() => router.push("/")} className="bg-blue-500 text-white p-2 rounded-md">
                 Go Home
             </button>
-            <button onClick={() => router.push("/products/2")} className="bg-blue-500 text-white p-2 rounded-md">
-                Go Products
-            </button>
         </div>
     );
 }
