@@ -1,3 +1,5 @@
+import { revalidatePath } from "next/cache";
+
 type MockUser = {
     id: number;
     name: string;
@@ -20,7 +22,7 @@ export default async function MockUsers() {
         });
 
         const newUser = await response.json();
-        console.log(newUser);
+        revalidatePath("/mock-users");
     }
 
     return (
