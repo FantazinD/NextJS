@@ -1,15 +1,16 @@
 "use client";
-import { useAuth } from "@clerk/nextjs";
+import { useAuth, useUser } from "@clerk/nextjs";
 import React, { useState } from "react";
 
 type Props = {};
 
 const Counter = (props: Props) => {
-    const { isLoaded, userId, sessionId, getToken } = useAuth();
+    //const { isLoaded, userId, sessionId, getToken } = useAuth();
+    const { isLoaded, isSignedIn, user } = useUser();
 
     const [count, setCount] = useState(0);
 
-    if (!isLoaded || !userId) {
+    if (!isLoaded || !isSignedIn) {
         return null;
     }
 
