@@ -6,7 +6,7 @@ type Props = {};
 
 const Error = ({ error }: { error: Error }) => {
     useEffect(() => {
-        console.log(error);
+        //console.log(error);
     }, [error]);
 
     return (
