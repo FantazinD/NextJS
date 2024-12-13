@@ -7,9 +7,6 @@ type MockUser = {
 };
 
 export default async function MockUsers() {
-    const authObj = await auth();
-    const userObj = await currentUser();
-
     const response = await fetch("https://6758788c60576a194d10ab21.mockapi.io/users");
     const users = await response.json();
 
